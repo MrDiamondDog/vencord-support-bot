@@ -1,0 +1,398 @@
+{
+    "start": {
+        "title": "Vencord Support",
+        "description": "Use the buttons below to get support for Vencord.",
+        "buttons": [
+            {
+                "label": "Continue",
+                "style": "Primary",
+                "goto": "disclaimer"
+            }
+        ]
+    },
+    "disclaimer": {
+        "title": "Vencord Support",
+        "description": "Before you continue, please read <#1027235873990901780>, <#1024351821873037462>, AND <#1110392683618390016>, as they contain important information and probably the solution you are looking for.",
+        "buttons": [
+            {
+                "label": "I have read those channels, continue",
+                "style": "Primary",
+                "goto": "support"
+            }
+        ]
+    },
+    "support": {
+        "title": "Vencord Support",
+        "description": "Please select the type of support you need.",
+        "buttons": [
+            {
+                "label": "Installer Won't Work",
+                "style": "Primary",
+                "goto": "installer"
+            },
+            {
+                "label": "Something inside Vencord won't work",
+                "style": "Primary",
+                "goto": "vencord"
+            },
+            {
+                "label": "I have a question about Vencord",
+                "style": "Primary",
+                "goto": "faq"
+            },
+            {
+                "label": "I have tried all of this and still need help",
+                "style": "Danger",
+                "goto": "help"
+            }
+        ]
+    },
+    "help": {
+        "title": "Vencord Support > Help",
+        "description": "Now that you have gone through this support dialog, you NOW can ask your problem in <#1026515880080842772>.\n**Do not ask your question until you have looked through all of the relevant options in this dialog.**",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "support"
+            }
+        ]
+    },
+    "vencord": {
+        "title": "Vencord Support > Vencord",
+        "description": "Please select the issue that best describes your problem.",
+        "buttons": [
+            {
+                "label": "401 error when connecting to cloud",
+                "style": "Primary",
+                "goto": "vencord_cloud"
+            },
+            {
+                "label": "Stuck on \"RTC Connecting\"",
+                "style": "Primary",
+                "goto": "vencord_rtc"
+            },
+            {
+                "label": "Theme broke and I can't open settings",
+                "style": "Primary",
+                "goto": "vencord_theme"
+            },
+            {
+                "label": "Devtools keeps crashing Discord",
+                "style": "Primary",
+                "goto": "vencord_devtools_crash"
+            },
+            {
+                "label": "Devtools keeps logging me out",
+                "style": "Primary",
+                "goto": "vencord_devtools_logout"
+            },
+            {
+                "label": "Crtl-Shift-I doesn't open devtools",
+                "style": "Primary",
+                "goto": "vencord_devtools_keybind"
+            },
+            {
+                "label": "Vencord isn't installed",
+                "style": "Primary",
+                "goto": "vencord_not_installed"
+            },
+            {
+                "label": "Vencord disappeared from my Discord",
+                "style": "Primary",
+                "goto": "vencord_update"
+            },
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "support"
+            }
+        ]
+    },
+    "vencord_cloud": {
+        "title": "Vencord Support > Vencord > 401 Error",
+        "description": "Delete Vencloud from your connections and try again",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "vencord_rtc": {
+        "title": "Vencord Support > Vencord > RTC Connecting",
+        "description": "This isn't Vencord's problem, it's Discord's. Try restarting Discord and if that doesn't work, try restarting your computer.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "vencord_theme": {
+        "title": "Vencord Support > Vencord > Theme",
+        "description": "Open the dev tools with `CTRL + Shift + i` and click on the \"console\" tab at the top. Then paste and run (with enter) the following code.\n\nIt will\n- disable custom css (you can turn it back on in Vencord Settings)\n- copy your current theme links to your clipboard as a backup\n- remove all themes\n\n```js\n(() => {\n    Vencord.Settings.useQuickCss = false\n    copy(Vencord.Settings.themeLinks.join(\"\\n\"))\n    Vencord.Settings.themeLinks = []\n    Vencord.Settings.enabledThemes = []\n})()\n```",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "vencord_devtools_crash": {
+        "title": "Vencord Support > Vencord > Devtools Crash",
+        "description": "This is caused by Discord, there is nothing we can do to fix it. A way around it is to open Devtools while Discord is still loading.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "vencord_devtools_logout": {
+        "title": "Vencord Support > Vencord > Devtools Logout",
+        "description": "This \"feature\" is Discord trying to not reveal your token. To disable this, enable the \"NoDevtoolsWarning\" plugin in Vencord Settings.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "vencord_devtools_keybind": {
+        "title": "Vencord Support > Vencord > Devtools Keybind",
+        "description": "If the ctrl + shift + i keybind doesn't work, it's likely because a different program conflicts with the keybind. This is most commonly the AMD Radeon Software. If you have that, disable keybinds in it (see [this video](https://cdn.discordapp.com/attachments/1024286218801926184/1139669756031553639/7qTeLzLlcS.mp4))",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "vencord_not_installed": {
+        "title": "Vencord Support > Vencord > Not Installed",
+        "description": "Use the \"Repair\" button in the installer or reinstall Vencord.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "vencord_update": {
+        "title": "Vencord Support > Vencord > Update",
+        "description": "Whenever Discord updates, Vencord is removed. There is no way around this, just reinstall Vencord.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "faq": {
+        "title": "Vencord Support > FAQ",
+        "description": "Please select the question that best describes your problem.",
+        "buttons": [
+            {
+                "label": "How do I install Vencord",
+                "style": "Primary",
+                "goto": "faq_install"
+            },
+            {
+                "label": "How do I use other Discord mod (BD, Replugged, etc.) plugins with Vencord",
+                "style": "Primary",
+                "goto": "faq_plugins"
+            },
+            {
+                "label": "Will I get banned for using Vencord",
+                "style": "Primary",
+                "goto": "faq_tos"
+            },
+            {
+                "label": "How do I migrate settings",
+                "style": "Primary",
+                "goto": "faq_cloud"
+            },
+            {
+                "label": "How do I uninstall Vencord",
+                "style": "Primary",
+                "goto": "faq_uninstall"
+            },
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "support"
+            }
+        ]
+    },
+    "faq_install": {
+        "title": "Vencord Support > FAQ > Install",
+        "description": "We provide a convenient graphical installer you can use. Or you can just grab Vencord from the Chrome & Firefox webstores.\nVisit our [download page](https://vencord.dev/install) to find out more!",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "faq_plugins": {
+        "title": "Vencord Support > FAQ > Plugins",
+        "description": "You don't. Vencord does not support other Discord mod's plugins.\n||If you are talking about plugins from <#1032200195582197831>, see the pins in that channel.||",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "faq_tos": {
+        "title": "Vencord Support > FAQ > TOS",
+        "description": "Vencord is against Discord's TOS, but there aren't any cases of people being banned. Have some common sense and you won't get banned.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "faq_cloud": {
+        "title": "Vencord Support > FAQ > Cloud",
+        "description": "You can use Vencloud to migrate your settings. Just go to Settings > Cloud and follow instructions from there.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "faq_uninstall": {
+        "title": "Vencord Support > FAQ > Uninstall",
+        "description": "Use the installer and press \"Uninstall\". For the web version, just remove the extension from your browser.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "vencord"
+            }
+        ]
+    },
+    "installer": {
+        "title": "Vencord Support > Installer",
+        "description": "Please select the issue that best describes your problem.",
+        "buttons": [
+            {
+                "label": "The installer doesn't open",
+                "style": "Primary",
+                "goto": "installer_wont_open"
+            },
+            {
+                "label": "The installer shows an error",
+                "style": "Primary",
+                "goto": "installer_error"
+            },
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "support"
+            }
+        ]
+    },
+    "installer_wont_open": {
+        "title": "Vencord Support > Installer > Doesn't Open",
+        "description": "Try using the powershell installer by running this in your terminal: \n```ps1\niwr \"https://raw.githubusercontent.com/Vencord/Installer/main/install.ps1\" -UseBasicParsing | iex\n```\nThen follow the prompts it asks you and it will install Vencord for you.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "installer"
+            }
+        ]
+    },
+    "installer_error": {
+        "title": "Vencord Support > Installer > Error",
+        "description": "Please select the issue that best describes your problem.",
+        "buttons": [
+            {
+                "label": "VencordInstaller can't be opened (MacOS)",
+                "style": "Primary",
+                "goto": "installer_error_mac"
+            },
+            {
+                "label": "Hold On! You have a broken Discord insall",
+                "style": "Primary",
+                "goto": "installer_error_hold_on"
+            },
+            {
+                "label": "Invalid Location",
+                "style": "Primary",
+                "goto": "installer_error_invalid_location"
+            },
+            {
+                "label": "Something Else",
+                "style": "Primary",
+                "goto": "installer_error_other"
+            },
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "installer"
+            }
+        ]
+    },
+    "installer_error_mac": {
+        "title": "Vencord Support > Installer > Error > MacOS",
+        "description": "Right click the installer and press \"Open\".",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "installer_error"
+            }
+        ]
+    },
+    "installer_error_hold_on": {
+        "title": "Vencord Support > Installer > Error > Hold On!",
+        "description": "Press \"Take Me There!\" and follow the instructions the error says to fix your Discord install.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "installer_error"
+            }
+        ]
+    },
+    "installer_error_invalid_location": {
+        "title": "Vencord Support > Installer > Error > Invalid Location",
+        "description": "You have selected an invalid location for your Discord install. Please select the correct location.",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "installer_error"
+            }
+        ]
+    },
+    "installer_error_other": {
+        "title": "Vencord Support > Installer > Error > Other",
+        "description": "Most likely, the error tells you exactly how to solve it. Read the error and if you still can't figure it out, ask in <#1026515880080842772>",
+        "buttons": [
+            {
+                "label": "Back",
+                "style": "Secondary",
+                "goto": "installer_error"
+            }
+        ]
+    }
+}
